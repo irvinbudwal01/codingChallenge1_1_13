@@ -1,0 +1,29 @@
+<!-- <apex:page standardController="Account">
+    <h1>Account: {!account.name}</h1>
+</apex:page> -->
+
+
+<apex:page standardController="Account" recordSetVar="accounts" extensions="MyVisualForceExtension" standardStylesheets="false" showHeader="false">
+<apex:stylesheet value="{!$Resource.styles}" />
+<p>THIS SHOULD CHANGE COLORS</p>
+  <apex:pageBlock>
+    <apex:form id="theForm">
+    <apex:pageBlockTable value="{!accounts}" var="acc">
+      <apex:column value="{!acc.name}"/>
+    </apex:pageBlockTable>
+
+    <apex:panelGrid columns="2">
+        <apex:commandLink styleClass="btn" action="{!previous}">Previous</apex:commandlink>
+        <apex:commandLink styleClass="btn" action="{!next}">Next</apex:commandlink>
+  </apex:panelGrid>
+</apex:form> 
+
+  </apex:pageBlock>
+
+</apex:page>
+
+<!-- <apex:page controller="MyCustomVisualForceExtension">
+    <p>Hi {!acct}!</p>
+</apex:page> -->
+
+
