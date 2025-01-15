@@ -1,9 +1,11 @@
+<!-- Challenge 1-->
+
 <!-- <apex:page standardController="Account">
     <h1>Account: {!account.name}</h1>
 </apex:page> -->
 
-
-<apex:page standardController="Account" recordSetVar="accounts" extensions="MyVisualForceExtension" standardStylesheets="false" showHeader="false">
+<!-- Challenge 2/5-->
+<!-- <apex:page standardController="Account" recordSetVar="accounts" extensions="MyVisualForceExtension" standardStylesheets="false" showHeader="false">
 <apex:stylesheet value="{!$Resource.styles}" />
 <p>THIS SHOULD CHANGE COLORS</p>
   <apex:pageBlock>
@@ -20,10 +22,67 @@
 
   </apex:pageBlock>
 
-</apex:page>
+</apex:page> -->
 
+<!-- Challenge 3-->
 <!-- <apex:page controller="MyCustomVisualForceExtension">
     <p>Hi {!acct}!</p>
 </apex:page> -->
 
+<!-- Challenge 7-->
 
+<!-- <apex:page controller="C7Controller" docType="html-5.0">
+  <apex:form>  
+    <apex:pageBlock>
+      <apex:pageBlockSection>
+        <apex:inputText value="{!inputValue}" id="searchInput"/>
+        <apex:commandButton action="{!search}" value="Search" id="searchButton"></apex:commandButton>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>  
+    <p>Found {!acct.name}!</p>
+</apex:page> -->
+
+<!-- Challenge 8-->
+
+<!-- <apex:page standardController="Account">
+  <apex:dataList value="{!account.Contacts}" var="contact">
+    <apex:outputText value="{!contact.name}" />
+  </apex:dataList>
+</apex:page> -->
+
+<!-- Challenge 11-->
+
+<!-- <apex:page controller="C11Controller">
+  <apex:form>
+    <apex:pageBlock>
+      <apex:pageBlockSection>
+        <apex:inputText value="{!inputSearch}" id="searchInput">
+          <apex:actionSupport event="onkeyup" action="{!search}" rerender="results"/>
+        </apex:inputText>
+        <apex:dataList value="{!accounts}" var="acc" id="results">
+          <apex:outputText value="{!acc.name}" />
+        </apex:dataList>
+      </apex:pageBlockSection>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page> -->
+
+<!-- Challenge 12-->
+
+<!-- <apex:page standardController="Account" recordSetVar="accounts">
+  <apex:form>
+    <apex:pageBlock>
+      <apex:pageBlockTable value="{!accounts}" var="acc">
+        <apex:column headerValue="Account Name">
+          <apex:outputField value="{!acc.name}">
+            <apex:inlineEditSupport showOnEdit="updateRecords" />
+          </apex:outputField>
+        </apex:column>
+      </apex:pageBlockTable>
+      <apex:pageBlockButtons>
+        <apex:commandButton value="Update Records" action="{!save}" style="display:none" id="updateRecords" />
+      </apex:pageBlockButtons>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page> -->
