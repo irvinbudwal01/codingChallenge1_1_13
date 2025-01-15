@@ -31,7 +31,7 @@
 
 <!-- Challenge 7-->
 
-<!-- <apex:page controller="C7Controller" docType="html-5.0">
+<apex:page controller="C7Controller" docType="html-5.0">
   <apex:form>  
     <apex:pageBlock>
       <apex:pageBlockSection>
@@ -40,8 +40,10 @@
       </apex:pageBlockSection>
     </apex:pageBlock>
   </apex:form>  
-    <p>Found {!acct.name}!</p>
-</apex:page> -->
+    <p>Found {!acct.name}!
+       contact
+    </p>
+</apex:page>
 
 <!-- Challenge 8-->
 
