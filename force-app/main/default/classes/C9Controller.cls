@@ -1,8 +1,8 @@
-public with sharing class C8Extension {
+public with sharing class C9Controller {
 
     public List<Account> accList {get; set;}
 
-    public C8Extension() {
+    public C9Controller() {
         this.accList = [SELECT Name, (SELECT Contact.Name FROM Contacts) FROM Account];
     }
     

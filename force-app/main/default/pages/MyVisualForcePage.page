@@ -72,7 +72,7 @@
 
 <!-- Challenge 9-->
 
-<apex:page controller="C8Extension">
+<!-- <apex:page controller="C9Controller">
   <apex:pageblock>
     <apex:pageBlockTable value="{!accList}" var="acc">
       <apex:column headerValue="Accounts/Contacts">
@@ -88,9 +88,44 @@
       </apex:column>
     </apex:pageBlockTable>
   </apex:pageblock>
-</apex:page>
+</apex:page> -->
 
 <!-- Challenge 10-->
+
+<!-- <apex:page controller='C10Controller'>
+  <apex:form rendered="{!showSearch}">
+    <apex:outputPanel id='search'>
+      <apex:pageblock>
+        <apex:pageBlockSection>
+          <apex:inputText value="{!inputSearch}" id="searchInput" />
+        </apex:pageBlockSection>
+        <apex:pageBlock>
+          <apex:pageBlockButtons>
+            <apex:commandButton value="Search" action="{!search}">
+              <apex:actionSupport event="onclick" rerender="result" />
+            </apex:commandButton>
+          </apex:pageBlockButtons>
+        </apex:pageBlock>
+      </apex:pageblock>
+    </apex:outputPanel>
+  </apex:form>
+
+  <apex:outputPanel rendered="{!showResult}" id='result'>
+    <apex:pageblock>
+      <apex:pageBlockTable value="{!accList}" var="acc">
+        <apex:column headerValue="Accounts/Contacts">
+          <p>Account:</p> {!acc.Name}
+          <p>Contacts:</p>
+          <apex:repeat value="{!acc.Contacts}" var="con">
+            {!con.name}
+            <apex:outputText value=", " />
+          </apex:repeat>
+          <hr />
+        </apex:column>
+      </apex:pageBlockTable>
+    </apex:pageblock>
+  </apex:outputPanel>
+</apex:page> -->
 
 <!-- Challenge 11-->
 
