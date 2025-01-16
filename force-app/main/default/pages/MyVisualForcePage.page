@@ -29,9 +29,26 @@
     <p>Hi {!acct}!</p>
 </apex:page> -->
 
+<!-- Challenge 6-->
+
+<!-- <apex:page standardController="Account" extensions='C6Extension'>
+  <apex:form>
+    <apex:pageBlock>
+      <apex:pageBlockButtons>
+        <apex:commandButton value="Display Name" action="{!displayName}">
+          <apex:actionSupport event="onchange" rerender="namePanel" />
+        </apex:commandButton>
+      </apex:pageBlockButtons>
+      <apex:outputPanel id='namePanel' rendered="{!visible}">
+        <p id='nameField'>Hi {!account.name}!</p>
+      </apex:outputPanel>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page> -->
+
 <!-- Challenge 7-->
 
-<apex:page controller="C7Controller" docType="html-5.0">
+<!-- <apex:page controller="C7Controller" docType="html-5.0">
   <apex:form>  
     <apex:pageBlock>
       <apex:pageBlockSection>
@@ -39,11 +56,11 @@
         <apex:commandButton action="{!search}" value="Search" id="searchButton"></apex:commandButton>
       </apex:pageBlockSection>
     </apex:pageBlock>
-  </apex:form>  
+  </apex:form>
     <p>Found {!acct.name}!
        contact
     </p>
-</apex:page>
+</apex:page> -->
 
 <!-- Challenge 8-->
 
@@ -52,6 +69,25 @@
     <apex:outputText value="{!contact.name}" />
   </apex:dataList>
 </apex:page> -->
+
+<!-- Challenge 9-->
+
+<apex:page standardController="Account" recordSetVar="accounts">
+  <apex:pageblock>
+    <apex:pageBlockTable value="{!accounts}" var="acc">
+      <apex:column headerValue="Account Name">
+        <apex:outputField value="{!acc.name}" />
+      </apex:column>
+    </apex:pageBlockTable>
+    <apex:pageBlockTable value="{!account.Contacts}" var="contact">
+      <apex:column headerValue="Contacts">
+        <apex:outputField value="{!contact.name}" />
+      </apex:column>
+    </apex:pageBlockTable>
+  </apex:pageblock>
+</apex:page>
+
+<!-- Challenge 10-->
 
 <!-- Challenge 11-->
 
