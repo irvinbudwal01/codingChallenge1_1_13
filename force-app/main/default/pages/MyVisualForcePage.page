@@ -72,16 +72,19 @@
 
 <!-- Challenge 9-->
 
-<apex:page standardController="Account" recordSetVar="accounts">
+<apex:page controller="C8Extension">
   <apex:pageblock>
-    <apex:pageBlockTable value="{!accounts}" var="acc">
-      <apex:column headerValue="Account Name">
-        <apex:outputField value="{!acc.name}" />
-      </apex:column>
-    </apex:pageBlockTable>
-    <apex:pageBlockTable value="{!account.Contacts}" var="contact">
-      <apex:column headerValue="Contacts">
-        <apex:outputField value="{!contact.name}" />
+    <apex:pageBlockTable value="{!accList}" var="acc">
+      <apex:column headerValue="Accounts/Contacts">
+
+        <p>Account:</p> {!acc.Name}
+        <p>Contacts:</p>
+        <apex:repeat value="{!acc.Contacts}" var="cont">
+          {!cont.name}
+          <apex:outputText value=", " />
+        </apex:repeat>
+
+        <hr />
       </apex:column>
     </apex:pageBlockTable>
   </apex:pageblock>
